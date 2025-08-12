@@ -32,7 +32,7 @@ export async function GET(request: NextRequest) {
         path: undefined,
         printBackground: true
     });
-    return new NextResponse(pdf, {
+    return new NextResponse(Buffer.from(pdf), {
       headers: {
         "Content-Type": "application/pdf",
         "Content-Disposition": 'inline; filename="page-output.pdf"',
